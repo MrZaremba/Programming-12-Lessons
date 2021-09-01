@@ -5,10 +5,20 @@ public class DatabaseHandler {
     private static final String DB_url = "jdbc:derby:database/forum;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
+    public static DatabaseHandler handler;
 
     public DatabaseHandler() {
         createConnection();
         createTable();
+    }
+
+    public static DatabaseHandler getHandler(){
+        if(handler == null){
+            handler = new DatabaseHandler();
+            return handler;
+        }else{
+            return handler;
+        }
     }
 
     private void createTable() {
