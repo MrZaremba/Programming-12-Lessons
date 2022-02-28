@@ -3,6 +3,11 @@ public class Person {
     int id;
     String name;
 
+    public Person(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
     @Override
     public int hashCode() {
         return name.hashCode();
@@ -21,6 +26,6 @@ public class Person {
 
     @Override
     public String toString(){
-        return "" + id;
+        return name;
     }
 }
