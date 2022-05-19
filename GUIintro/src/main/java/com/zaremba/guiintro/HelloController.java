@@ -30,7 +30,7 @@ public class HelloController {
 
 
     public void addOne() {
-        int current = Integer.parseInt(lblAddOne.getText());
+       /*int current = Integer.parseInt(lblAddOne.getText());
         int addition = 0;
         boolean keepTryin = true;
         while (keepTryin) {
@@ -47,6 +47,9 @@ public class HelloController {
         current += addition;
         lblAddOne.setText("" + current);
         loadWindow("/layouts/getInfo.fxml","Get Information Page");
+
+        */
+        loadWindow("/layouts/table.fxml", "A table");
     }
 
     public void getPerson() {
@@ -54,8 +57,6 @@ public class HelloController {
         if (person == null) {
             return;
         }
-        lblList1.setText(person.name);
-        lblList2.setText(person.age + "");
     }
 
     private void loadWindow(String location, String title) {

@@ -1,18 +1,41 @@
 package com.zaremba.guiintro;
 
-public class Person {
-    public String name;
-    public int age;
+import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                '}';
+public class Person {
+    public SimpleStringProperty name;
+    public SimpleStringProperty status;
+    public SimpleStringProperty occupation;
+
+
+    public Person(String name, String status, String occupation) {
+        this.name =new SimpleStringProperty(name);
+        this.status = new SimpleStringProperty(status);
+        this.occupation = new SimpleStringProperty(occupation);
     }
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public String getName() {
+        return name.get();
+    }
+
+    public SimpleStringProperty nameProperty() {
+        return name;
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    public SimpleStringProperty statusProperty() {
+        return status;
+    }
+
+    public String getOccupation() {
+        return occupation.get();
+    }
+
+    public SimpleStringProperty occupationProperty() {
+        return occupation;
     }
 }

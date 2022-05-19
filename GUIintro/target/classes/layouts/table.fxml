@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zaremba.guiintro.Table">
+   <children>
+      <TableView fx:id="mainTable" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="330.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="124.66665172576904" text="Name" />
+          <TableColumn fx:id="colStatus" prefWidth="98.00003051757812" text="Status" />
+            <TableColumn fx:id="colOccupation" prefWidth="104.66670227050781" text="Occupation" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
