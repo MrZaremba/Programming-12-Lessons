@@ -16,8 +16,8 @@ public class Main {
     }
     public static void main(String[] args) {
         handler = DatabaseHandler.getHandler();
-       //addMember("32434","sgfdsg","sdfsdfsgf","sdffdsgs");
-        String qu = "SELECT * FROM MEMBER WHERE NAME = 'John'";
+        //addMember("322434","sg2fdsg","sdfsdf2sgf","sdf2fdsgs");
+        String qu = "SELECT * FROM MEMBER";
         ResultSet resultSet = handler.execQuery(qu);
         try{
             while(resultSet.next()){

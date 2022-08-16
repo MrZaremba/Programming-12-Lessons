@@ -22,7 +22,7 @@ public class DatabaseHandler {
     }
 
     private void createTable() {
-        String TABLE_NAME = "MEMBER";
+        String TABLE_NAME = "MEMBER2";
         try {
             stmt = conn.createStatement();
             DatabaseMetaData dmn = conn.getMetaData();
@@ -45,15 +45,11 @@ public class DatabaseHandler {
 
     private void createConnection() {
         try {
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
             conn = DriverManager.getConnection(DB_url);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
     }
