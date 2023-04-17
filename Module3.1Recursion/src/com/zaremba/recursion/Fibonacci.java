@@ -6,13 +6,7 @@ public class Fibonacci {
 
     //recursive method to add terms before
     public static int Fibonacci(Integer[] numbers, int n){
-
-        if(n<=0){
-            return 0;
-        }
-        else{
-            return  Fibonacci(numbers, n-1 ) + numbers[n-1];
-        }
+        return 0;
     }
 
     public static void main(String[] args) {
