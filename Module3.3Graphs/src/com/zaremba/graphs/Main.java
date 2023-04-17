@@ -49,24 +49,7 @@ public class Main {
         return null;
     }
     private static void BFS(Node n){
-        n.setVisited(true);
-        System.out.println(n);
-        for (int i=0; i<n.getNodes().size(); i++){
-            Integer v = (Integer) n.getNodes().get(i);
-            Node c = getNode(v.intValue());
-            if(!c.isVisited()){
-                if (r.indexOf(""+c.getKey())==-1)
-                    r+=c.getKey()+"";
-            }
-        }
-        for (int i=0; i<n.getNodes().size(); i++){
-            Integer V = (Integer) n.getNodes().get(i);
-            Node c = getNode(V.intValue());
-            if (!c.isVisited()) {
-                BFS(c);
-            }
-
-        }
+       //Your Code Here 
     }
 
     private static void setupTree() throws FileNotFoundException {
